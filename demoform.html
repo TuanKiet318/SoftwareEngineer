@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example - Coursera Style</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center;     /* Căn giữa theo chiều dọc */
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .scroll-container {
+            max-height: 100px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .submit-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+        }
+
+        .item {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Radio{
+            margin-bottom: 20px;
+        }
+
+        .checkbox {
+            margin-bottom: 20px;
+        }
+
+        .checkbox {
+            display: flex;
+            flex-direction: column; /* Xếp các mục theo chiều dọc */
+            margin-bottom: 20px;
+        }
+
+        .checkbox label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-items {
+            display: flex; /* Xếp theo chiều ngang */
+            gap: 20px; /* Khoảng cách giữa các checkbox */
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center; /* Căn giữa checkbox với label */
+        }
+
+        .checkbox-item label {
+            margin-left: 5px; /* Khoảng cách nhỏ giữa checkbox và label */
+        }
+        .info {
+            margin-bottom: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sign Up for Course</h1>
+
+        <!-- Text Input -->
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password">
+
+        <!-- Dropdown (Select) -->
+        <label for="course">Select Course:</label>
+        <select id="course" name="course">
+            <option value="webdev">Web Development</option>
+            <option value="datasci">Data Science</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="design">UI/UX Design</option>
+        </select>
+
+        <!-- Textarea (Multiline input) -->
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments..."></textarea>
+
+        <!-- Radio Buttons -->
+         <div class="Radio">
+        <label>Course Level:</label>
+        <div class="button">
+            <div class="item">
+                <input type="radio" id="beginner" name="level" value="beginner">
+                <label for="beginner">Beginner</label>
+            </div>
+
+            <div class="item">
+                <input type="radio" id="intermediate" name="level" value="intermediate">
+                <label for="intermediate">Intermediate</label>
+            </div>
+
+            <div class="item">
+                <input type="radio" id="advanced" name="level" value="advanced">
+                <label for="advanced">Advanced</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkbox">
+        <label>Skills Interested In:</label>
+        <div class="checkbox-items">
+            <div class="checkbox-item">
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label class="info" for="html">HTML</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label class="info" for="css">CSS</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="js" name="skills" value="JavaScript">
+                <label class="info" for="js">JavaScript</label>
+            </div>
+        </div>
+    </div>
+
+        <!-- Scrollable Content -->
+        <label>Terms and Conditions:</label>
+        <div class="scroll-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, iure quam perferendis, magni quae a dolorem eaque obcaecati, blanditiis at eius? Excepturi blanditiis nulla esse minima corrupti illum corporis rerum?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit aliquam blanditiis laudantium aliquid incidunt. Itaque est reprehenderit ut. Unde provident veniam molestias sequi ipsam quam eveniet, debitis impedit cumque. Odit?</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="submit-buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </div>
+
+</body>
+</html>
